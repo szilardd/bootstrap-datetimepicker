@@ -883,8 +883,8 @@
                 if (isValid(targetMoment)) {
                     date = targetMoment;
                     viewDate = date.clone();
-                    input.val(date.format(actualFormat));
-                    element.data('date', date.format(actualFormat));
+                    input.val(date.format(targetMoment._f || actualFormat));
+                    element.data('date', date.format(targetMoment._f || actualFormat));
                     unset = false;
                     update();
                     notifyEvent({
